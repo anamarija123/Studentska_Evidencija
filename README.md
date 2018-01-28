@@ -10,14 +10,18 @@ Dodani div i h2.
 
 ### Identity
 Za nastavak se potrebno registrirati ili ako ste već registrirani, potrebno se logirati.
-
+Koristen Authorize atribut koji onemogucuje pristup ukoliko niste registrirani.
+```asp.net
+[Authorize]
+```
 #### Model u MVC-u
 
-Modeli: Student, Nastavnik, Predmet, Smjer, Ispit entitete.
+Modeli: Student, Nastavnik, Predmet, Smjer, Ispit.
 
 Svaki entitet ima svoj ID.
 Student ima ime i prezime te datum rodenja. Nastavnik ima ime, prezime i datum zaposlenja.
 Unos imena i prezimena je ograniceno na 15 znakova.
+
 Primjer:
 ```asp.net
 [Required]
