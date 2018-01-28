@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Studentska_Evidencija-PIN", "Studentska_Evidencija-PIN\Studentska_Evidencija-PIN.csproj", "{1A395FD4-DFA2-44E4-8955-2366E714F1D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A395FD4-DFA2-44E4-8955-2366E714F1D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A395FD4-DFA2-44E4-8955-2366E714F1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A395FD4-DFA2-44E4-8955-2366E714F1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A395FD4-DFA2-44E4-8955-2366E714F1D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {730ED320-C14E-4EF9-8A49-E3EED80EF461}
+	EndGlobalSection
+EndGlobal

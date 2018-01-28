@@ -1,0 +1,48 @@
+@model Studentska_Evidencija_PIN.Models.Ispit
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ispit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum_ispita)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Datum_ispita)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ocjena)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ocjena)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nastavnik)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nastavnik.Ime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Predmet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Predmet.naziv)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Student)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Student.Ime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
