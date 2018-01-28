@@ -33,8 +33,10 @@ Prilikom kreiranja ili editiranja datuma u entitetu, prikazuje se padajuci izbor
 [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
 ```
 Smjer sadrzi ID, naziv i ects bodove potrebne za upis na taj smjer.
+
 Predmet sadrzi ID,naziv i strani kljuc smjera.
 U Ispit entitetu se nalaze tri strana kljuca - profesorID, studentID i predmetID. Takodjer sadrzi i svoj ID,ocjenu te datum ispita.
+
 Na stranici se ne prikazuju njihovi IDevi vec ime i prezime ili naziv, za lakse snalazenje.
 
 ##### Migracija
