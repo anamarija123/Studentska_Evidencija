@@ -2,20 +2,143 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Vsite Studentska evidencija</h1>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Dobrodosli na Vsite Studentsku evidenciju</h2>
-        <p>
-            Studentska evidencija sluzi za evidentiranje studenata
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Posjetite Vsite stranicu</h2>
-        <p>Informirajte se o fakultetu.</p>
-        <p><a class="btn btn-default" href="https://www.vsite.hr/">Vsite button</a></p>
+<!DOCTYPE>
+<html>
+<head>
+    <title>Naslovnica</title>
+    <link href="@Url.Content("~/css/main.css")" rel="stylesheet" type="text/css" />
+    <style>
+
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class='container carousel'>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner text-center" role="listbox">
+                <div class="item active">
+                    <div class="col-lg-8 pull-right">
+                        <img src="~/images/pc1.jpg">
+                    </div>
+                    <div class="col-lg-4">
+                        <h2>
+                            Sed vel lectus<br>
+                            <small>
+                                by Merovingio in Jun 22, 2017 at
+                                21:59
+                            </small>
+                        </h2>
+                        <p>
+                            Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus.
+                            Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi.
+                            Pellentesque ipsum. Nulla non arcu lacinia neque faucibus...
+                            Pellentesque ipsum. Nulla non arcu lacinia neque faucibus...
+                            Pellentesque ipsum. Nulla non arcu lacinia neque faucibus...
+                            Pellentesque ipsum. Nulla non arcu lacinia neque faucibus...
+                        </p>
+                        <a class='btn btn-info pull-right'
+                           href="/article/show/sed-vel-lectus/9">
+                            <i class="fa fa-long-arrow-right"> </i>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="col-lg-8 pull-right">
+                        <img src="~/images/pc2.jpg">
+                    </div>
+                    <div class="col-lg-4">
+                        <h2>
+                            Proin porta auctor nisi<br>
+                            <small>
+                                by Merovingio in Jun 22, 2017 at
+                                00:34
+                            </small>
+                        </h2>
+                        <p>
+                            Proin porta auctor nisi in interdum. Praesent a accumsan neque. Quisque ut nulla ac libero egestas tristique. Nunc venenatis elit lorem, ut viverra neque rhoncus a. Proin erat risus, pharetra vitae elementum eget, accumsan ornare mauris.
+                            Praesent...
+                        </p>
+                        <a class='btn btn-info pull-right'
+                           href="/article/show/sed-vel-lectus/9">
+                            <i class="fa fa-long-arrow-right"> </i>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="col-lg-8 pull-right">
+                        <img src="~/images/pc3.jpg">
+                    </div>
+                    <div class="col-lg-4">
+                        <h2>
+                            Aenean sodales<br>
+                            <small>
+                                by Merovingio in Jun 22, 2017 at
+                                00:33
+                            </small>
+                        </h2>
+                        <p>
+                            Aenean sodales, leo eu euismod tincidunt, felis odio aliquam velit,
+                            quis porta lorem erat eget erat. Aliquam porta libero erat, sed aliquet est
+                            sollicitudin a. Curabitur nec tellus in eros egestas venenatis ac sed nisl. In consectetur nisl eget...
+                        </p>
+                        <a class='btn btn-info pull-right'
+                           href="/article/show/sed-vel-lectus/9">
+                            <i class="fa fa-long-arrow-right"> </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
     </div>
 
-</div>
+    <div class="container text-center">
+        <h3>What We Do</h3><br>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                <p>Current Project</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                <p>Project 2</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="well">
+                    <p>Some text..</p>
+                </div>
+                <div class="well">
+                    <p>Some text..</p>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+    <footer class="container-fluid text-center">
+        <p>Footer Text</p>
+    </footer>
+ 
+</body>
+
+
+</html>
+
