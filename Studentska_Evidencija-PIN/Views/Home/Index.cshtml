@@ -7,17 +7,33 @@
 <head>
     <title>Naslovnica</title>
     <link href="@Url.Content("~/css/main.css")" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var blink_speed = 1500;
+        var t = setInterval(function () {
+            var elem = document.getElementById('welcome');
+            elem.style.visibility = (elem.style.visibility == 'hidden' ? '' : 'hidden');
+        }, blink_speed);
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#intro").css("font-style", "italic");
+        });</script>
+    <script>
+        $(document).ready(function () {
+            $("#educInfo").css("color", "#931027");
+        });</script>
+   
     <style>
 
         footer {
-            background-color: #f2f2f2;
+            background - color: #f2f2f2;
             padding: 25px;
         }
-
     </style>
 </head>
 <body>
-
+    <div><h2 id="welcome">Dobrodošli na studentsku evidenciju Tehničkog Fakulteta</h2> </div>
     <div class='container carousel'>
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -30,73 +46,65 @@
             <div class="carousel-inner text-center" role="listbox">
                 <div class="item active">
                     <div class="col-lg-8 pull-right">
-                        <img src="~/images/pc1.jpg">
+                        <img src="~/images/pc1.jpg" alt="Studenti">
                     </div>
                     <div class="col-lg-4">
-                        <h2>
-                            Sed vel lectus<br>
-                            <small>
-                                by Merovingio in Jun 22, 2017 at
-                                21:59
-                            </small>
-                        </h2>
+                            <h2 id="rastemo">
+                                Rastemo...<br>
+                                <small>
+                                    jer ulažemo u svoje studente
+                                </small>
+                            </h2>
                         <p>
-                            Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus.
-                            Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi.
-                            Pellentesque ipsum. Nulla non arcu lacinia neque faucibus...
-                            Pellentesque ipsum. Nulla non arcu lacinia neque faucibus...
-                            Pellentesque ipsum. Nulla non arcu lacinia neque faucibus...
-                            Pellentesque ipsum. Nulla non arcu lacinia neque faucibus...
+                        <p class="text-success">
+                            U deset godina povećali smo broj studenata gotovo <mark>pet puta</mark>, jer 2008. imali smo
+                            ukupno 103 studenta, a danas ih imamo 477. Prošle akademske
+                            godine povećali smo i upisnu kvotu na preddiplomski studij sa 60 na 80 studenata i
+                            popunili smo cijelu kvotu.
                         </p>
-                        <a class='btn btn-info pull-right'
-                           href="/article/show/sed-vel-lectus/9">
-                            <i class="fa fa-long-arrow-right"> </i>
-                        </a>
+                        <p class="text-info">
+                            Za usporedbu, 2005. godine kada je studij pokrenut, upisali smo 29 studenata,
+                            kazala je pročelnica Odjela za informatiku prof. dr. Patrizia Poščić na svečanoj
+                            sjednici održanoj povodom prvog jubileja Odjela.
+
+                        </p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="col-lg-8 pull-right">
-                        <img src="~/images/pc2.jpg">
+                        <img src="~/images/pc2.jpg" class="img-circle" alt="Fakultet">
                     </div>
                     <div class="col-lg-4">
-                        <h2>
-                            Proin porta auctor nisi<br>
+                        <h2 id="info">
+                            Povijest <br>
                             <small>
-                                by Merovingio in Jun 22, 2017 at
-                                00:34
+                                našeg fakulteta...
                             </small>
                         </h2>
-                        <p>
-                            Proin porta auctor nisi in interdum. Praesent a accumsan neque. Quisque ut nulla ac libero egestas tristique. Nunc venenatis elit lorem, ut viverra neque rhoncus a. Proin erat risus, pharetra vitae elementum eget, accumsan ornare mauris.
-                            Praesent...
+                        <p id="intro">
+                            Godina osnutka Fakulteta je 1960., tada pod imenom Strojarskog fakulteta. Nakon prvotnog školovanja diplomiranih inženjera strojarstva,
+                            Fakultet od šk. god. 1969./70. školuje
+                            i diplomirane inženjere brodogradnje te mijenja ime u Strojarsko-brodograđevni fakultet.
+                            Pod ovim imenom djeluje do 1973. godine kada je preimenovan u Tehnički fakultet.
+                            Fakultet je šk. god. 1971./72. započeo sa izvođenjem nastave na studiju građevinarstva, koji se 1976. godine osnivanjem Građevinskog fakulteta odvaja u
+                            samostalnu organizaciju.
                         </p>
-                        <a class='btn btn-info pull-right'
-                           href="/article/show/sed-vel-lectus/9">
-                            <i class="fa fa-long-arrow-right"> </i>
-                        </a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="col-lg-8 pull-right">
-                        <img src="~/images/pc3.jpg">
+                        <img src="~/images/pc3.jpg" class="img-rounded" alt="Student">
                     </div>
                     <div class="col-lg-4">
-                        <h2>
-                            Aenean sodales<br>
-                            <small>
-                                by Merovingio in Jun 22, 2017 at
-                                00:33
-                            </small>
+                        <h2 id="education">
+                            Obrazovanje<br>
                         </h2>
-                        <p>
-                            Aenean sodales, leo eu euismod tincidunt, felis odio aliquam velit,
-                            quis porta lorem erat eget erat. Aliquam porta libero erat, sed aliquet est
-                            sollicitudin a. Curabitur nec tellus in eros egestas venenatis ac sed nisl. In consectetur nisl eget...
+                        <p id="educInfo">
+                            Studijski programi koji se izvode na Fakultetu rezultat su tradicionalnih, ali i
+                            novih znanstvenih dostignuća u znanstvenim poljima strojarstva, brodogradnje, elektrotehnike i računarstva te srodnim tehničkim poljima.
+                            U više su navrata inovirani i prilagođavani potrebama gospodarstva. Uz obavezne predmete, studijski programi sadrže i velik broj izbornih predmeta,
+                            čime se postiže njihova prilagodljivost individualnim potrebama i željama studenata.
                         </p>
-                        <a class='btn btn-info pull-right'
-                           href="/article/show/sed-vel-lectus/9">
-                            <i class="fa fa-long-arrow-right"> </i>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -112,11 +120,22 @@
     </div>
 
     <div class="container text-center">
-        <h3>What We Do</h3><br>
+        <h3 id="id1">Studiraj na TF-u</h3><br>
+        <div>Ukoliko ste student našeg fakulteta, ulogirajte se za pristup evidenciji!</div><br>
+        <button type="button"
+                onclick="document.getElementById('id1').style.color = 'red'">
+            Click Me For Love Us!
+        </button>
         <div class="row">
             <div class="col-sm-4">
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                <p>Current Project</p>
+                <h3>Za više informacija...</h3><br>
+                <b>
+                    preuzmite našu brošuru i informirajte se!<br>
+                    <iframe src="~/images/rit.pdf" width="100%" height="100%">
+                        This browser does not support PDFs. Please download the PDF to view it: <a href="http://www.riteh.uniri.hr/media/filer_public/bd/24/bd241b5c-e59c-4829-9037-d61d52c84cb0/riteh_brosura_a5-15.pdf">Download PDF</a>
+                    </iframe>
+                    <p>ili posjetite našu original web stranicu:</p><br>
+                    <a href="http://www.riteh.uniri.hr/" >Go to original website</a>
             </div>
             <div class="col-sm-4">
                 <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
@@ -136,7 +155,7 @@
     <footer class="container-fluid text-center">
         <p>Footer Text</p>
     </footer>
- 
+
 </body>
 
 
