@@ -5,7 +5,13 @@
     padding: 30px;
   
 }
-
+#znanost {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: dotted;
+    padding: 30px;
+}
 #rastemo {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
@@ -46,4 +52,17 @@
 body{
     background-image:url(../images/background.png);
 }
+#upisi {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    padding:inherit
+}
 
+#p1{
+    font-stretch:condensed;
+}
+
+#tablica{
+    text-align:left;
+}

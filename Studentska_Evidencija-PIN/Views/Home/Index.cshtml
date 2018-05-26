@@ -23,7 +23,13 @@
         $(document).ready(function () {
             $("#educInfo").css("color", "#931027");
         });</script>
-   
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#p1").css("color", "black").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>
     <style>
 
         footer {
@@ -122,39 +128,86 @@
     <div class="container text-center">
         <h3 id="id1">Studiraj na TF-u</h3><br>
         <div>Ukoliko ste student našeg fakulteta, ulogirajte se za pristup evidenciji!</div><br>
-        <button type="button"
-                onclick="document.getElementById('id1').style.color = 'red'">
-            Click Me For Love Us!
-        </button>
-        <div class="row">
-            <div class="col-sm-4">
-                <h3>Za više informacija...</h3><br>
-                <b>
-                    preuzmite našu brošuru i informirajte se!<br>
-                    <iframe src="~/images/rit.pdf" width="100%" height="100%">
-                        This browser does not support PDFs. Please download the PDF to view it: <a href="http://www.riteh.uniri.hr/media/filer_public/bd/24/bd241b5c-e59c-4829-9037-d61d52c84cb0/riteh_brosura_a5-15.pdf">Download PDF</a>
-                    </iframe>
-                    <p>ili posjetite našu original web stranicu:</p><br>
-                    <a href="http://www.riteh.uniri.hr/" >Go to original website</a>
-            </div>
-            <div class="col-sm-4">
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                <p>Project 2</p>
-            </div>
-            <div class="col-sm-4">
-                <div class="well">
-                    <p>Some text..</p>
-                </div>
-                <div class="well">
-                    <p>Some text..</p>
-                </div>
-            </div>
-        </div>
-    </div><br>
+                <p id="p1">There is not elevator to success. You need to take staris!</p>
+                <button>Click me for go up</button>
+                <button type="button"
+                        onclick="document.getElementById('id1').style.color = 'red'">
+                    Click Me For Love Us!
+                </button>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3>Za više informacija...</h3><br>
+                        <b>
+                            preuzmite našu brošuru i informirajte se!<br>
+                            <iframe src="~/images/rit.pdf" width="100%" height="100%">
+                                This browser does not support PDFs. Please download the PDF to view it: <a href="http://www.riteh.uniri.hr/media/filer_public/bd/24/bd241b5c-e59c-4829-9037-d61d52c84cb0/riteh_brosura_a5-15.pdf">Download PDF</a>
+                            </iframe>
+                            <p>ili posjetite našu original web stranicu:</p><br>
+                            <a href="http://www.riteh.uniri.hr/">Go to original website</a>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2 id="znanost">Znanost</h2>
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Otvori za info</button>
 
-    <footer class="container-fluid text-center">
-        <p>Footer Text</p>
-    </footer>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Znanost</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            Naši se studiji inženjerstva odvijaju u istraživačkom okruženju; nastavnici koji drže predavanja i vježbe sudjeluju u istraživanjima
+                                            unutar širokog raspona tehničkih znanosti (strojarstvo, brodogradnja, elektrotehnika, računarstvo, temeljne tehničke znanosti i
+                                            interdisciplinarne tehničke znanosti). Studenti preddiplomskih, diplomskih i poslijediplomskih studija imaju priliku usko surađivati s
+                                            istraživačima različitih akademskih i profesionalnih pozadina na uzbudljivim istraživačkim i razvojnim projektima.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Zatvori</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <h3 id="upisi">Upisi:</h3>
+                            <a href="http://www.riteh.uniri.hr/obrazovanje/upisi-studenata-akad-god-20182019/">Upiši se!</a>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="well">
+                            <p>Najbolji motivacijski govor:</p>
+                            <iframe width="250" height="200" src="https://www.youtube.com/embed/XBiEC6zfmKY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                        <table>
+                            <col width="130">
+                            <col width="80">
+                            <tr>
+                                <td align="left">Vukovarska 58<br />
+                                51000 Rijeka</td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    Tel: +385 51 651 444<br />
+                                    Fax: +385 51 651 416<br />
+                                    E-mail: dekanat@riteh.hr<br />
+                                    OIB: 46319717480<br />
+                                    Žiro račun: HR6024020061100110092<br />
+                                    Banka: Erste & Steiermärkische Bank d.d.<br />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                        <footer class="container-fluid text-center">
+                            <p>Footer Text</p>
+                        </footer>
 
 </body>
 
