@@ -5,6 +5,13 @@
     padding: 30px;
   
 }
+
+#id1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: blue;
+    text-decoration: underline;
+}
 #znanost {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
@@ -28,7 +35,10 @@
     font-weight: bold;
     font-style: italic;
 }
-
+.inline-block {
+    display: inline-block;
+   
+}
 .carousel {
     padding-bottom: 25px
 }
@@ -65,4 +75,40 @@ body{
 
 #tablica{
     text-align:left;
+}
+
+.linkovi a {
+    display: block;
+    text-decoration: none;
+}
+
+.grupa {
+    border: 1px solid silver;
+    width: 200px;
+    margin-bottom: 20px;
+ 
+}
+
+.naslovi {
+    cursor: pointer;
+    background-image: url(../images/plus.png);
+    background-repeat: no-repeat;
+    background-position: top-left;
+    padding-left: 20px;
+    border: 2px solid silver;
+}
+.linkovi {
+    display: none;
+}
+
+.naslovi.xyz {
+    background-image: url(../images/minus.png);
+}
+
+.grid {
+  border-style:dashed;
+}
+#tablicaFont {
+    font-weight: bold;
+    font-style: italic;
 }
