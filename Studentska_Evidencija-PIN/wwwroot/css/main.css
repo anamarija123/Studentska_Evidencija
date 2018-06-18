@@ -24,7 +24,13 @@
     font-weight: bold;
     font-style: italic;
 }
-
+#loggin {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    padding: 15px;
+    background-color: #f1f1c1;
+}
 #info {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
