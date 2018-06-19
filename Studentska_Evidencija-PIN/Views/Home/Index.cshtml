@@ -48,7 +48,11 @@
             background - color: #f2f2f2;
             padding: 25px;
         }
-
+   
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -145,16 +149,15 @@
     </div>
 
     <div class="container text-center">
-        <h3 id="id1">Studiraj na TF-u</h3><br>
-        <div class="loggin">
 
+        <div class="t01">
             @if (SignInManager.IsSignedIn(User))
             {
                 <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="loggin">
                     <table style="width:100%">
                         <tr>
-                            <td><a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">Hello @UserManager.GetUserName(User)!</a></td>
-                            <td><button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button></td>
+                            <th><a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage"><b>Pozdrav @UserManager.GetUserName(User)!</b></a></th>
+                            <th><button type="submit" class="btn btn-link navbar-btn navbar-link"><img src="~/images/logout.png" alt="register" width="150" height="50" /></button></th>
                         </tr>
                     </table>
                 </form>
@@ -163,85 +166,87 @@
             {
                 <table style="width:100%">
                     <tr>
-                        <td><a asp-area="" asp-controller="Account" asp-action="Register"><img src="~/images/register.png" alt="register" width="180" height="90" /></a></td>
-                        <td><a asp-area="" asp-controller="Account" asp-action="Login"><img src="~/images/login.png" alt="log in" width="150" height="80" /></a></td>
+                        <th>Ukoliko niste naš student registrirajte se za uvid u evidenciju!</th>
+                        <th>Ulogirajte se ukoliko ste naš student!</th>
+                    </tr>
+                    <tr>
+                        <th><a asp-area="" asp-controller="Account" asp-action="Register"><img src="~/images/studentreg.jpg" alt="register" width="180" height="60" /></a></th>
+                        <th><a asp-area="" asp-controller="Account" asp-action="Login"><img src="~/images/login.png" alt="log in" width="130" height="60" /></a></th>
                     </tr>
                 </table>
             }
         </div>
 
-        <div class="alert alert-info">
-            <strong>Motivation!</strong> There is not elevator to success. You need to take staris!
-        </div>
+            <div>
+                <p id="quote">
+                    <a><strong>Motivation!</strong><br /> There is not elevator to success. You need to take stairs!</a><br />
+                    <img src="~/images/giphy.gif" alt="stairs" width="130" height="120" />
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+
+                    <div class="alert alert-info">
+                        <strong>Info blok</strong> Za više informacija...
+                    </div>
+
+        <p id="rastemo">preuzmite našu brošuru i informirajte se!</p> <br>
+        <iframe src="~/images/rit.pdf" width="100%" height="100%">
+            This browser does not support PDFs. Please download the PDF to view it: <a href="http://www.riteh.uniri.hr/media/filer_public/bd/24/bd241b5c-e59c-4829-9037-d61d52c84cb0/riteh_brosura_a5-15.pdf">Download PDF</a>
+        </iframe>
+
+        <p><b>ili posjetite našu original web stranicu:</b></p>
+        <a href="http://www.riteh.uniri.hr/">Go to original website</a><br />
+        <p><b>Korisne web stranice:</b></p>
+
+        <div id="wrap">
+            <div id="main">
 
 
-        <div class="alert alert-info">
-            <strong>Motivation!</strong> There is not elevator to success. You need to take staris!
-        </div>
-
-        <div class="row">
-            <div class="col-sm-4">
-
-                <div class="alert alert-info">
-                    <strong>Info blok</strong> Za više informacija...
+                <div id="left">
+                    <div class="grupa">
+                        <div class="naslovi">Fakultetski linkovi</div>
+                        <div class="linkovi">
+                            <a href="https://moodle.srce.hr/2017-2018/">Merlin</a>
+                            <a href="https://www.isvu.hr/nastavnici/prijava">Nastavnički portal</a>
+                            <a href="http://prostorije.uniri.hr/ispitivanja/month.php?area=16">Raspored kolokvija</a>
+                            <a href="http://spoint.riteh.hr/#">Share point</a>
+                            <a href="https://www.isvu.hr/studomat/prijava">Studomat</a>
+                            <a href="http://prostorije.uniri.hr/week.php?area=16">Rezervacija prostorija</a>
+                        </div>
+                    </div>
                 </div>
 
-                <p id="rastemo">preuzmite našu brošuru i informirajte se!</p> <br>
-                <iframe src="~/images/rit.pdf" width="100%" height="100%">
-                    This browser does not support PDFs. Please download the PDF to view it: <a href="http://www.riteh.uniri.hr/media/filer_public/bd/24/bd241b5c-e59c-4829-9037-d61d52c84cb0/riteh_brosura_a5-15.pdf">Download PDF</a>
-                </iframe>
 
-                <p><b>ili posjetite našu original web stranicu:</b></p>
-                <a href="http://www.riteh.uniri.hr/">Go to original website</a><br />
-                <p><b>Korisne web stranice:</b></p>
-
-                <div id="wrap">
-                    <div id="main">
-
-
-                        <div id="left">
-                            <div class="grupa">
-                                <div class="naslovi">Fakultetski linkovi</div>
-                                <div class="linkovi">
-                                    <a href="https://moodle.srce.hr/2017-2018/">Merlin</a>
-                                    <a href="https://www.isvu.hr/nastavnici/prijava">Nastavnički portal</a>
-                                    <a href="http://prostorije.uniri.hr/ispitivanja/month.php?area=16">Raspored kolokvija</a>
-                                    <a href="http://spoint.riteh.hr/#">Share point</a>
-                                    <a href="https://www.isvu.hr/studomat/prijava">Studomat</a>
-                                    <a href="http://prostorije.uniri.hr/week.php?area=16">Rezervacija prostorija</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="grupa">
+                    <div class="naslovi">Zavodi</div>
+                    <div class="linkovi">
+                        <a href="http://er.riteh.hr/index.php/ER">Engineering review</a>
+                        <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zae/">Zavod za automatiku</a>
+                        <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zm/">Zavod za materijale</a>
+                        <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zbimt/">Zavod za brodogradnju</a>
+                        <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zmfri/">Zavod za mehaniku</a>
+                        <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zr/">Zavod za računarstvo</a>
+                    </div>
+                </div>
 
 
-                        <div class="grupa">
-                            <div class="naslovi">Zavodi</div>
-                            <div class="linkovi">
-                                <a href="http://er.riteh.hr/index.php/ER">Engineering review</a>
-                                <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zae/">Zavod za automatiku</a>
-                                <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zm/">Zavod za materijale</a>
-                                <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zbimt/">Zavod za brodogradnju</a>
-                                <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zmfri/">Zavod za mehaniku</a>
-                                <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zr/">Zavod za računarstvo</a>
-                            </div>
-                        </div>
-
-
-                        <div class="grupa">
-                            <div class="naslovi">Informatički časopisi</div>
-                            <div class="linkovi">
-                                <a href="#">Bug</a>
-                                <a href="#">Vidi</a>
-                                <a href="#">PC Chip</a>
-                                <a href="#">Hacker</a>
-                                <a href="#">PCplay</a>
-                            </div>
-                        </div>
-
+                <div class="grupa">
+                    <div class="naslovi">Informatički časopisi</div>
+                    <div class="linkovi">
+                        <a href="#">Bug</a>
+                        <a href="#">Vidi</a>
+                        <a href="#">PC Chip</a>
+                        <a href="#">Hacker</a>
+                        <a href="#">PCplay</a>
                     </div>
                 </div>
 
             </div>
+        </div>
+
+    </div>
 
             <div class="col-sm-4">
 
