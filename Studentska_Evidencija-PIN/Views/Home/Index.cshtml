@@ -22,16 +22,16 @@
             var elem = document.getElementById('welcome');
             elem.style.visibility = (elem.style.visibility == 'hidden' ? '' : 'hidden');
         }, blink_speed);
-    </script>
-    <script>
+
+
         $(document).ready(function () {
             $("#intro").css("font-style", "italic");
-        });</script>
-    <script>
+        });
+
         $(document).ready(function () {
             $("#educInfo").css("color", "#931027");
-        });</script>
-    <script type="text/javascript">
+        });
+
         $(document).ready(
             function () {
                 $('.naslovi').click(
@@ -41,17 +41,18 @@
                     }
                 );
             }
-        );</script>
+        );
+
+        function changeText(id) {
+            id.innerHTML = "Pridruži nam se!";
+        }
+    </script>
+
     <style>
 
         footer {
             background - color: #f2f2f2;
             padding: 25px;
-        }
-   
-        th, td {
-            padding: 5px;
-            text-align: center;
         }
     </style>
 </head>
@@ -185,13 +186,15 @@
                         <strong>Info blok</br></strong> Kutak za buduće studente...
                     </div>
 
-                    <div class="preuzmite">Klikom na link preuzmite našu brošuru i informirajte se!<br>
-                    <p><a href = "http://www.riteh.uniri.hr/media/filer_public/bd/24/bd241b5c-e59c-4829-9037-d61d52c84cb0/riteh_brosura_a5-15.pdf">Brošura tehničkog fakulteta</a></p>
-                    </div> 
-                 
+                    <div class="preuzmite">
+                        Klikom na link preuzmite našu brošuru i informirajte se!<br>
+                        <p><a href="http://www.riteh.uniri.hr/media/filer_public/bd/24/bd241b5c-e59c-4829-9037-d61d52c84cb0/riteh_brosura_a5-15.pdf">Brošura tehničkog fakulteta</a></p>
+                    </div>
 
-                    <div class="rastemo">ili posjetite našu original web stranicu:
-                    <p><a href="http://www.riteh.uniri.hr/">Go to original website</a></p><br />
+
+                    <div class="rastemo">
+                        ili posjetite našu original web stranicu:
+                        <p><a href="http://www.riteh.uniri.hr/">Go to original website</a></p><br />
                     </div>
 
                     <div class="upisi">
@@ -238,13 +241,13 @@
 
                         </div>
                     </div>
-
+                    <h1 onclick="changeText(this)">Klikni me!</h1>
                 </div>
 
                 <div class="col-sm-4">
 
                     <div class="alert alert-info">
-                        <strong>Info blok </br></strong> Kutak za upisane studente...
+                        <strong>Info blok <br/></strong> Kutak za upisane studente...
                     </div>
 
                     <div class="well">
@@ -255,60 +258,60 @@
 
                     <div class="buduci"><b>Korisne web stranice:</b>
 
-                    <div id="wrap">
-                        <div id="main">
+                        <div id="wrap">
+                            <div id="main">
 
 
-                            <div id="left">
-                                <div class="grupa">
-                                    <div class="naslovi">Fakultetski linkovi</div>
-                                    <div class="linkovi">
-                                        <a href="https://moodle.srce.hr/2017-2018/">Merlin</a>
-                                        <a href="https://www.isvu.hr/nastavnici/prijava">Nastavnički portal</a>
-                                        <a href="http://prostorije.uniri.hr/ispitivanja/month.php?area=16">Raspored kolokvija</a>
-                                        <a href="http://spoint.riteh.hr/#">Share point</a>
-                                        <a href="https://www.isvu.hr/studomat/prijava">Studomat</a>
-                                        <a href="http://prostorije.uniri.hr/week.php?area=16">Rezervacija prostorija</a>
+                                <div id="left">
+                                    <div class="grupa">
+                                        <div class="naslovi">Fakultetski linkovi</div>
+                                        <div class="linkovi">
+                                            <a href="https://moodle.srce.hr/2017-2018/">Merlin</a>
+                                            <a href="https://www.isvu.hr/nastavnici/prijava">Nastavnički portal</a>
+                                            <a href="http://prostorije.uniri.hr/ispitivanja/month.php?area=16">Raspored kolokvija</a>
+                                            <a href="http://spoint.riteh.hr/#">Share point</a>
+                                            <a href="https://www.isvu.hr/studomat/prijava">Studomat</a>
+                                            <a href="http://prostorije.uniri.hr/week.php?area=16">Rezervacija prostorija</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
 
-                            <div class="grupa">
-                                <div class="naslovi">Zavodi</div>
-                                <div class="linkovi">
-                                    <a href="http://er.riteh.hr/index.php/ER">Engineering review</a>
-                                    <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zae/">Zavod za automatiku</a>
-                                    <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zm/">Zavod za materijale</a>
-                                    <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zbimt/">Zavod za brodogradnju</a>
-                                    <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zmfri/">Zavod za mehaniku</a>
-                                    <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zr/">Zavod za računarstvo</a>
+                                <div class="grupa">
+                                    <div class="naslovi">Zavodi</div>
+                                    <div class="linkovi">
+                                        <a href="http://er.riteh.hr/index.php/ER">Engineering review</a>
+                                        <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zae/">Zavod za automatiku</a>
+                                        <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zm/">Zavod za materijale</a>
+                                        <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zbimt/">Zavod za brodogradnju</a>
+                                        <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zmfri/">Zavod za mehaniku</a>
+                                        <a href="http://www.riteh.uniri.hr/ustroj/zavodi/zr/">Zavod za računarstvo</a>
+                                    </div>
                                 </div>
-                            </div>
 
 
-                            <div class="grupa">
-                                <div class="naslovi">Informatički časopisi</div>
-                                <div class="linkovi">
-                                    <a href="#">Bug</a>
-                                    <a href="#">Vidi</a>
-                                    <a href="#">PC Chip</a>
-                                    <a href="#">Hacker</a>
-                                    <a href="#">PCplay</a>
+                                <div class="grupa">
+                                    <div class="naslovi">Informatički časopisi</div>
+                                        <div class="linkovi">
+                                            <a href="#">Bug</a>
+                                            <a href="#">Vidi</a>
+                                            <a href="#">PC Chip</a>
+                                            <a href="#">Hacker</a>
+                                            <a href="#">PCplay</a>
+                                        </div>
                                 </div>
-                            </div>
 
-                        </div>
-                    </div>
-                    </div>
-                </div>
+                             </div>
+                          </div>
+                       </div>
+                     </div>
 
                 <div class="col-sm-4">
                     <div class="alert alert-info">
                         <strong>Info blok <br /></strong> Kutak za profesore...
                     </div>
 
-                    <nav id="navbar-example2" class="navbar navbar-light bg-light">
+                    <nav id="navbar" class="navbar navbar-light bg-light">
                         <a class="navbar-brand" href="http://www.mobilnost.hr/hr/">ERASMUS+</a>
                         <ul class="nav nav-pills">
                             <li class="nav-item dropdown">
@@ -324,23 +327,19 @@
                             </li>
                         </ul>
                     </nav>
-                    
-                        <h4 id="fat">ERASMUS+ NATJEČAJ ZA ODRŽAVANJE NASTAVE 2018/2019</h4>
-                        <div class="erasmus">
-                            <p>
-                                ERASMUS+ NATJEČAJ ZA ODRŽAVANJE NASTAVE 2018/2019<br /><br />
-                                Tehničko veleučilište objavljuje Erasmus+ natječaj za odlazak na održavanje nastave u zimskom semestru ak.
-                                godine 2018/19. Natječaj traje dva mjeseca stoga Vas molimo da kontaktirate ustanove na koje želite ići da biste imali njihov odgovor te ga
-                                priložili u Natječajnu dokumentaciju.
-                            </p><br />
-                            <p>
-                                Detaljne informacije o prijavi možete pročitati u priloženim dokumentima.
-                                Natječaj za Erasmus+ mobilnost za djelatnike objavljuje se dva puta u akademskoj godini – u rujnu za ljetni semestar i u ožujku za zimski semestar slijedeće akademske godine.
-                                Za prijavu na natječaj potrebno je ispuniti Prijavni obrazac i Plan rada odnosno Nastavni plan, ovisno da li se prijavljujete za stručno usavršavanje (plan rada) ili održavanje nastave
-                                (nastavni plan), priložiti kopiju domovnice i životopis.
-                            </p>
-                        </div>
+                    <div class="ers">
+                        <p id="ersNaslov">ERASMUS+ NATJEČAJ ZA ODRŽAVANJE NASTAVE 2018/2019</p> 
+                        Tehničko veleučilište objavljuje Erasmus+ natječaj za odlazak na održavanje nastave u zimskom semestru ak.
+                        godine 2018/19. Natječaj traje dva mjeseca stoga Vas molimo da kontaktirate ustanove na koje želite ići da biste imali njihov odgovor te ga
+                        priložili u Natječajnu dokumentaciju.<br />
+                        Detaljne informacije o prijavi možete pročitati u priloženim dokumentima.
+                        Natječaj za Erasmus+ mobilnost za djelatnike objavljuje se dva puta u akademskoj godini – u rujnu za ljetni semestar i u ožujku za zimski semestar slijedeće akademske godine.
+                        Za prijavu na natječaj potrebno je ispuniti Prijavni obrazac i Plan rada odnosno Nastavni plan, ovisno da li se prijavljujete za stručno usavršavanje (plan rada) ili održavanje nastave
+                        (nastavni plan), priložiti kopiju domovnice i životopis.
+                    </div>
+
                 </div>
+
         </div>
 
 
@@ -348,17 +347,24 @@
             <footer>
                 <div id="banner">
                     <div class="inline-block">
-                        <img src="~/images/instagram.jpg" alt="Instagram" width="50" height="50">
+                        <a href="https://www.instagram.com/explore/locations/137217173040425/tehnicko-veleuciliste-zagreb/?hl=hr">
+                            <img src="~/images/instagram.jpg" alt="Instagram" width="50" height="50">
+                         </a>
                     </div>
 
                     <div class="inline-block">
+                        <a href="https://twitter.com/tvz_zagreb">
                         <img src="~/images/twitter.png" alt="Twitter" width="50" height="50">
+                        </a>
                     </div>
 
                     <div class="inline-block">
+                        <a href="https://www.facebook.com/TVZ.Zagreb/">
                         <img src="~/images/facebook.png" alt="Facebook" width="40" height="40">
+                        </a>
                     </div>
                 </div>
+
             </footer>
         </div>
     </div>

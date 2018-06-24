@@ -6,7 +6,11 @@
     max-width: 100%;
     margin-bottom: 20px;
 }
-
+.velikoA {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
 .table-responsive {
     width: 100%;
     overflow-x: auto;
@@ -68,8 +72,15 @@
     font-style: italic;
     padding-top: 15px;
 }
-.erasmus{
-    text-align:left;
+#ersNaslov {
+    font-family: Arial;
+    font-weight: bold;
+    text-align:center;
+}
+.ers {
+    text-align: left;
+    font-family: Arial;
+    font-style: italic;
 }
 .rastemo {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -160,10 +171,6 @@ body{
 }
 #p1{
     font-stretch:condensed;
-}
-
-#tablica{
-    text-align:left;
 }
 
 .linkovi a {
