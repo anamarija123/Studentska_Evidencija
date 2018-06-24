@@ -154,32 +154,26 @@
             @if (SignInManager.IsSignedIn(User))
             {
                 <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="loggin">
-                    <table style="width:100%">
-                        <tr>
-                            <th><a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage"><b>Pozdrav @UserManager.GetUserName(User)!</b></a></th>
-                            <th><button type="submit" class="btn btn-link navbar-btn navbar-link"><img src="~/images/logout.png" alt="register" width="150" height="50" /></button></th>
-                        </tr>
-                    </table>
+                    <div class="alignleft"><a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage"><b>Pozdrav @UserManager.GetUserName(User)!</b></a></div>
+                    <div class="alignright"><button type="submit" class="btn btn-link navbar-btn navbar-link"><img src="~/images/logout.png" alt="register" width="150" height="50" /></button></div>
                 </form>
             }
             else
             {
-                <table style="width:100%">
-                    <tr>
-                        <th>Ukoliko niste naš student registrirajte se za uvid u evidenciju!</th>
-                        <th>Ulogirajte se ukoliko ste naš student!</th>
-                    </tr>
-                    <tr>
-                        <th><a asp-area="" asp-controller="Account" asp-action="Register"><img src="~/images/studentreg.jpg" alt="register" width="180" height="60" /></a></th>
-                        <th><a asp-area="" asp-controller="Account" asp-action="Login"><img src="~/images/login.png" alt="log in" width="130" height="60" /></a></th>
-                    </tr>
-                </table>
+                <div class="alignleft">
+                    Ukoliko niste naš student registrirajte se za uvid u evidenciju! <br />
+                    <a asp-area="" asp-controller="Account" asp-action="Register"><img src="~/images/studentreg.jpg" alt="register" width="180" height="60" /></a>
+                </div>
+                <div class="alignright">
+                    Ulogirajte se ukoliko ste naš student! <br />
+                    <a asp-area="" asp-controller="Account" asp-action="Login"><img src="~/images/login.png" alt="log in" width="130" height="60" /></a>
+                </div>
             }
         </div>
 
             <div>
                 <p id="quote">
-                    <a><strong>Motivation!</strong><br /> There is not elevator to success. You need to take stairs!</a><br />
+                    <a><strong>Motivation!</strong><br /> There is no elevator to success. You need to take the stairs!</a><br />
                     <img src="~/images/giphy.gif" alt="stairs" width="130" height="120" />
                 </p>
             </div>
@@ -191,10 +185,10 @@
                         <strong>Info blok</br></strong> Kutak za buduće studente...
                     </div>
 
-                    <p id="preuzmite">preuzmite našu brošuru i informirajte se!</p> <br>
-                    <iframe src="~/images/rit.pdf" width="100%" height="100%">
-                        This browser does not support PDFs. Please download the PDF to view it: <a href="http://www.riteh.uniri.hr/media/filer_public/bd/24/bd241b5c-e59c-4829-9037-d61d52c84cb0/riteh_brosura_a5-15.pdf">Download PDF</a>
-                    </iframe>
+                    <div class="preuzmite">Klikom na link preuzmite našu brošuru i informirajte se!<br>
+                    <p><a href = "http://www.riteh.uniri.hr/media/filer_public/bd/24/bd241b5c-e59c-4829-9037-d61d52c84cb0/riteh_brosura_a5-15.pdf">Brošura tehničkog fakulteta</a></p>
+                    </div> 
+                 
 
                     <div class="rastemo">ili posjetite našu original web stranicu:
                     <p><a href="http://www.riteh.uniri.hr/">Go to original website</a></p><br />
@@ -311,30 +305,41 @@
 
                 <div class="col-sm-4">
                     <div class="alert alert-info">
-                        <strong>Info blok </br></strong> Kutak za profesore...
+                        <strong>Info blok <br /></strong> Kutak za profesore...
                     </div>
 
-
-                    <table id="tablicaFont">
-                        <col width="130">
-                        <col width="80">
-                        <tr>
-                            <td align="left">
-                                Vukovarska 58<br />
-                                51000 Rijeka
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="left">
-                                Tel: +385 51 651 444<br />
-                                Fax: +385 51 651 416<br />
-                                E-mail: dekanat@riteh.hr<br />
-                                OIB: 46319717480<br />
-                                Žiro račun: HR6024020061100110092<br />
-                                Banka: Erste & Steiermärkische Bank d.d.<br />
-                            </td>
-                        </tr>
-                    </table><br />
+                    <nav id="navbar-example2" class="navbar navbar-light bg-light">
+                        <a class="navbar-brand" href="http://www.mobilnost.hr/hr/">ERASMUS+</a>
+                        <ul class="nav nav-pills">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dokumentacija</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="http://eur-lex.europa.eu/legal-content/HR/TXT/PDF/?uri=CELEX:C2017/361/04&amp;from=EN">Poziv na podnošenje prijedloga</a><br />
+                                    <a class="dropdown-item" href="http://mobilnost.hr/cms_files/2018/01/1516789492_celex-c2017-431-08-hr-txt.pdf">Ispravak poziva</a><br />
+                                    <a class="dropdown-item" href="http://www.mobilnost.hr/cms_files/2018/03/1521018836_erasmus-plus-programme-guide2-hr.pdf">Vodič</a><br />
+                                    <a class="dropdown-item" href="http://www.mobilnost.hr/hr/sadrzaj/sudjelovanje/obrazovanje-i-osposobljavanje/erasmus-strukovno-obrazovanje-i-osposobljavanje/dokumentacija-za-prijavu-2018-/">Dokumentacija za prijavu 2018</a><br />
+                                    <a class="dropdown-item" href="http://www.mobilnost.hr/hr/sadrzaj/sudjelovanje/obrazovanje-i-osposobljavanje/erasmus-strukovno-obrazovanje-i-osposobljavanje/potpora-pri-prijavi-2018-/">Potpora pri prijavi 2018</a><br />
+                                    <a class="dropdown-item" href="http://www.mobilnost.hr/hr/sadrzaj/sudjelovanje/obrazovanje-i-osposobljavanje/erasmus-strukovno-obrazovanje-i-osposobljavanje/provedba-projekata-2018-/">Provedba projekata 2018</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                        <h4 id="fat">ERASMUS+ NATJEČAJ ZA ODRŽAVANJE NASTAVE 2018/2019</h4>
+                        <div class="erasmus">
+                            <p>
+                                ERASMUS+ NATJEČAJ ZA ODRŽAVANJE NASTAVE 2018/2019<br /><br />
+                                Tehničko veleučilište objavljuje Erasmus+ natječaj za odlazak na održavanje nastave u zimskom semestru ak.
+                                godine 2018/19. Natječaj traje dva mjeseca stoga Vas molimo da kontaktirate ustanove na koje želite ići da biste imali njihov odgovor te ga
+                                priložili u Natječajnu dokumentaciju.
+                            </p><br />
+                            <p>
+                                Detaljne informacije o prijavi možete pročitati u priloženim dokumentima.
+                                Natječaj za Erasmus+ mobilnost za djelatnike objavljuje se dva puta u akademskoj godini – u rujnu za ljetni semestar i u ožujku za zimski semestar slijedeće akademske godine.
+                                Za prijavu na natječaj potrebno je ispuniti Prijavni obrazac i Plan rada odnosno Nastavni plan, ovisno da li se prijavljujete za stručno usavršavanje (plan rada) ili održavanje nastave
+                                (nastavni plan), priložiti kopiju domovnice i životopis.
+                            </p>
+                        </div>
                 </div>
         </div>
 
