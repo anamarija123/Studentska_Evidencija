@@ -1,13 +1,16 @@
 # Studentska Evidencija
-Studentska evidencija je stranica koja sadrzi bazu podataka fakulteta u koju se ulogira nastavnik/administrator te ima uvid u podatke 
+Studentska evidencija je stranica koja sadrzi bazu podataka fakulteta u koju se ulogira nastavnik/student te ima uvid u podatke 
 studenata, profesora,smjerove,predmete i ispite. Ima mogućnost editiranja i kreiranja novih podataka.
 
 ## Pocetna stranica-Vsite
-![alt tag](https://github.com/anamarija123/Studentska_Evidencija-PIN/blob/master/HomePage.PNG)
+![alt tag](https://github.com/anamarija123/Studentska_Evidencija-PIN/blob/master/evidencija.PNG)
 
-Uredjena sa bootstrap gridom (.col-md-4) koja daje tri jednake kolone.
-Dodani div i h2.
+Za izgled početne web stranice, kao temelj sam izabrala bootstrap template. Stranicu sam radila po pitanju: kome je ova evidencija namjenjena? Tko će biti posjetitelji te stranice? - odgovorila sam sa budući studenti, sadašnji studenti i profesori.
+Upotrebljavala sam nešto javascripta i external css. Početna web stranica je rađena u Home - Index.cshtml file-u. External css se nalazi u wwwroot - css - main.css file-u.
 
+Na sve tablice sam dodala boostrap klasu (class="table table-hover" ili "class=table table-border" ili "class=table table-striped")
+
+Projekt je rađen u akademske svrhe.
 ### Identity
 Za nastavak se potrebno registrirati ili ako ste već registrirani, potrebno se logirati.
 Koristen Authorize atribut koji onemogucuje pristup ukoliko niste registrirani.
