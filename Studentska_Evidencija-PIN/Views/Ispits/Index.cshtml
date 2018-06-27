@@ -4,58 +4,64 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
-<link href="@Url.Content("~/css/StyleSheet.css")" rel="stylesheet" type="text/css" />
-
+<h2>Ispiti</h2>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Datum_ispita)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ocjena)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nastavnik)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Predmet)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Student)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Datum_ispita)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ocjena)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nastavnik.ImeiPrezime)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Predmet.naziv)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Student.ImeiPrezime)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Datum_ispita)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ocjena)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nastavnik)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Predmet)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Student)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Datum_ispita)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ocjena)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nastavnik.ImeiPrezime)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Predmet.naziv)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Student.ImeiPrezime)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
